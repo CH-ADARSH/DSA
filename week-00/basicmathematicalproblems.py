@@ -40,33 +40,82 @@ it is a even number else odd number'''
 
 # palindrome number or string
  
-def number_palindrome(number):
-    num = number
-    palindrome_number = 0
-    while num>0:
-        last_digit  = num % 10
-        palindrome_number = (palindrome_number * 10) + last_digit
-        num = num // 10
-    if palindrome_number == number:
-        print(f"Entered number is a palindrome number :{palindrome_number}")
-    else:
-        print(f"Entered number is not a palindrome number :{palindrome_number}")
+# def number_palindrome(number):
+#     num = number
+#     palindrome_number = 0
+#     while num>0:
+#         last_digit  = num % 10
+#         palindrome_number = (palindrome_number * 10) + last_digit
+#         num = num // 10
+#     if palindrome_number == number:
+#         print(f"Entered number is a palindrome number :{palindrome_number}")
+#     else:
+#         print(f"Entered number is not a palindrome number :{palindrome_number}")
 
-def string_palindrome(string):
-    string1 = string
-    string_palindrome = string1[::-1]      
-    if string_palindrome == string1:
-        print(f"Entered string is a palindrome string :{string_palindrome}")
-    else:
-        print(f"Entered string is not a palindrome string :{string_palindrome}")
+# def string_palindrome(string):
+#     string1 = string
+#     string_palindrome = string1[::-1]      
+#     if string_palindrome == string1:
+#         print(f"Entered string is a palindrome string :{string_palindrome}")
+#     else:
+#         print(f"Entered string is not a palindrome string :{string_palindrome}")
 
-user_input = input(f"Select what you want to check as a palindrome  1.number and 2.string \n")
+# user_input = input(f"Select what you want to check as a palindrome  1.number and 2.string \n")
 
-if(user_input == 'number'):
-    number = int(input())
-    number_palindrome(number)
-elif(user_input == 'string'):
-    string = input()
-    string_palindrome(string)
-else:
-    print("Opps!! Wait✋, You Have Entered A Wrong Option Try Again 👉👉")
+# if(user_input == 'number'):
+#     number = int(input())
+#     number_palindrome(number)
+# elif(user_input == 'string'):
+#     string = input()
+#     string_palindrome(string)
+# else:
+#     print("Opps!! Wait✋, You Have Entered A Wrong Option Try Again 👉👉")
+
+
+#armstrong number
+
+# n = int(input())
+# user_input = n
+# length = len(str(user_input))  
+# sum = 0
+# while user_input > 0:
+#     individual_digit = user_input % 10
+#     sum = sum + (individual_digit ** length)
+#     user_input = user_input // 10   #time complexity here is O(log(N)10)
+# if sum == n:
+#     print(f"The number {n} is an armstrong number")
+# else:
+#     print(f"The number {n} is not an armstrong number")
+
+
+#factors of a number
+#Brute force approach  -- time complexity is O(n)
+# n =int (input())
+# num = n
+# factors = []
+# for i in range(1, (num+1)):
+#     if num%i ==0:
+#         factors.append(i)
+# print(factors)
+
+# Optimized approach -- time complexity is O(n//2) half
+# n =int (input())
+# num = n
+# factors = []
+# for i in range(1, (num//2)+1):
+#     if num%i ==0:
+#         factors.append(i)
+# factors.append(n)
+# print(factors)
+
+#most efficient approach -- time complexity is O(sqrt(n))
+# n = int(input())
+# num = n
+# factors = []
+# for i in range(1, int((num**0.5))+1):
+#     if num % i ==0:
+#         factors.append(i)
+#         if num//i !=i:
+#             factors.append(num//i)
+#     factors.sort()
+# print(factors)
