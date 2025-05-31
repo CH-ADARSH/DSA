@@ -119,3 +119,14 @@ it is a even number else odd number'''
 #             factors.append(num//i)
 #     factors.sort()
 # print(factors)
+
+
+# Frequency Map / Dictionary time complexity is O(n)
+nums = [1, 2, 32, 432, 25, 6, 7, 8, 9]
+Frequency_Map = {}
+for i in range(0, len(nums)):
+    if nums[i] in Frequency_Map:
+        Frequency_Map[nums[i]] += 1
+    else:
+        Frequency_Map[nums[i]]=1
+print(Frequency_Map)
