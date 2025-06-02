@@ -122,11 +122,33 @@ it is a even number else odd number'''
 
 
 # Frequency Map / Dictionary time complexity is O(n)
-nums = [1, 2, 32, 432, 25, 6, 7, 8, 9]
-Frequency_Map = {}
-for i in range(0, len(nums)):
-    if nums[i] in Frequency_Map:
-        Frequency_Map[nums[i]] += 1
-    else:
-        Frequency_Map[nums[i]]=1
-print(Frequency_Map)
+# nums = [1, 2, 32, 432, 25, 6, 7, 8, 9]
+# Frequency_Map = {}
+# for i in range(0, len(nums)):
+#     if nums[i] in Frequency_Map:
+#         Frequency_Map[nums[i]] += 1
+#     else:
+#         Frequency_Map[nums[i]]=1
+# print(Frequency_Map)
+
+# Hashing
+# n = [1, 2, 10, 4, 5, 8, 2, 1, 9, 6, 7, 8,1,2,4]
+# m = [2,3,6,10,111,24,34,543,53,65,453,543,2,10,2,4,1,8,3,5]
+# hash_map = [0] * 11
+# for num in n:
+#     hash_map[num] =+1
+# for num in m:
+#     if num<1 or num>10:
+#         print(num,0)
+#     else:
+#         print(hash_map[num])
+# print(hash_map)
+
+
+n = [1, 2, 10, 4, 5, 8, 2, 1, 9, 6, 7, 8,1,2,4]
+m = [2,3,6,10,111,24,34,543,53,65,453,543,2,10,2,4,1,8,3,5]
+hash_map = {}
+num = len(n)
+for i in range(0,num):
+    hash_map(num[i]) = hash_map.get(num[i],0)+1
+print(hash_map)
